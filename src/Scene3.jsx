@@ -54,6 +54,7 @@ const Scene3 = () => {
         'https://files.threedy.ai/jobs/fbeeff24/other/mesh_separated.fbx',
         (object) => {
           scene.add(object);
+          camera.updateProjectionMatrix();
           // Make sure you call animate
           animate();
         }
