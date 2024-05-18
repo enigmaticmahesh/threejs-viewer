@@ -50,15 +50,12 @@ const Scene3 = () => {
       scene.add(light2);
 
       const fbxLoader = new FBXLoader();
-      fbxLoader.load(
-        'https://files.threedy.ai/jobs/fbeeff24/other/mesh_separated.fbx',
-        (object) => {
-          scene.add(object);
-          camera.updateProjectionMatrix();
-          // Make sure you call animate
-          animate();
-        }
-      );
+      fbxLoader.load('/mclaren.fbx', (object) => {
+        scene.add(object);
+        camera.updateProjectionMatrix();
+        // Make sure you call animate
+        animate();
+      });
 
       // Position the camera
       camera.position.z = 1000;
